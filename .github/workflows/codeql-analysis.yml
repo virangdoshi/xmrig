@@ -63,7 +63,7 @@ jobs:
     #    uses a compiled language
 
     - run: |
-       mkdir xmrig/build && cd xmrig/build
+       mkdir xmrig/build && cd xmrig/scripts
        cmake ..
        make -j$(nproc)
        # make bootstrap
