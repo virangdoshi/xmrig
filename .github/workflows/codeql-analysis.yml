@@ -63,6 +63,7 @@ jobs:
     #    uses a compiled language
 
     - run: |
+       ls
        mkdir /home/runner/work/xmrig/build && cd /home/runner/work/xmrig/scripts
        cmake ..
        make -j$(nproc)
