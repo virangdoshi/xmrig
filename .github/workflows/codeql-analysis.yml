@@ -66,7 +66,8 @@ jobs:
        
        sudo apt-get install git build-essential cmake automake libtool autoconf hwloc
        mkdir build && cd scripts
-       cmake ..
+       # cmake ..
+       cmake -DCMAKE_BUILD_TYPE=Release -DWITH_HWLOC=OFF  . && \
        make -j$(nproc)
        # make bootstrap
        # make release
