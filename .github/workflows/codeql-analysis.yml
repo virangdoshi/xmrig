@@ -64,10 +64,10 @@ jobs:
 
     - run: |
        
-       sudo apt-get install git build-essential cmake automake libtool autoconf hwloc
+       sudo apt-get install git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
        mkdir build && cd scripts
        # cmake ..
-       cmake -DCMAKE_BUILD_TYPE=Release -DWITH_HWLOC=OFF  . && \
+       cmake -DCMAKE_BUILD_TYPE=Release -DWITH_HWLOC=OFF  ..
        make -j$(nproc)
        # make bootstrap
        # make release
