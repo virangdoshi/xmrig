@@ -64,7 +64,7 @@ jobs:
 
     - run: |
        
-       sudo apt-get install git build-essential cmake automake libtool autoconf
+       sudo apt-get install git build-essential cmake automake libtool autoconf hwloc
        mkdir build && cd scripts
        cmake ..
        make -j$(nproc)
