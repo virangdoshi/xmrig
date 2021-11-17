@@ -63,8 +63,11 @@ jobs:
     #    uses a compiled language
 
     - run: |
-       make bootstrap
-       make release
+       mkdir xmrig/build && cd xmrig/build
+       cmake ..
+       make -j$(nproc)
+       # make bootstrap
+       # make release
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
